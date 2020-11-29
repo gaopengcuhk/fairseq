@@ -1,0 +1,11 @@
+cd /datadrive_b/gaopeng_bert/DeepLearningExamples/PyTorch/LanguageModeling/BERT/
+bash scripts/docker/launch.sh
+cd fairseq
+pip install --editable ./
+git clone https://github.com/NVIDIA/apex
+cd apex
+pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" \
+  --global-option="--deprecated_fused_adam" --global-option="--xentropy" \
+  --global-option="--fast_multihead_attn" ./
+  
+ 
